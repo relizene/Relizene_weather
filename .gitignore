@@ -7,13 +7,13 @@ env/
 venv/
 
 # Build
-
+.gitignore
 # IDE
 .vscode/
 .idea/
 
 # Тестовые данные
-testы/
+tests/
 
 # Logs
 *.log
