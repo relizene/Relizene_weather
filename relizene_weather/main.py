@@ -39,7 +39,7 @@ def run_geo(lon=None, lat=None):
 
 
 if __name__ == '__main__':
-    a = run_city(header='lang-ru')
+    a = run_city(city='Куракино, Параньгинский район',header='lang-ru')
     print(a)
     
     
