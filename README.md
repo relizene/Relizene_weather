@@ -1,47 +1,65 @@
-# weather_api
+# Relizene Weather
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PyPI](https://img.shields.io/pypi/v/relizene-weather?color=blue)](https://pypi.org/project/relizene-weather/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![PyPI](https://img.shields.io/pypi/v/your-package-name)](https://pypi.org/project/your-package-name/)
 
-Краткое описание проекта:
-> weather_api — это инструмент для получения прогноза погода, по координатам широты и долготы, а так же по названию местности.  Написан на Python, использует [requests, inspect.].
+> Простой и удобный Python-модуль для получения прогноза погоды через OpenWeatherMap API. 
+> Поддерживает валидацию локаций через Nominatim и кеширование запросов.
+> В особенности здесь реилизована сложная валдиация города. Для полной информации откройте файл из папки Doc.
 
-## 🚀 Установка
->cd ваш-репозиторий
->git clone https://github.com/relizene/Relizene_weather.git
->pip install -e .
+---
 
+## 🚀 Быстрый старт
 
-🎯 Быстрый старт
+### Установка
+> ```bash
+> pip install relizene-weather
 
-Минимальный пример использования:
-from Relizene_weather import main
-result = main.run_city("параметр название города") или result = main.run_geo(1параметр="широта", 2параметр="долгота")
-print(result)
+Пример использования
+> python
+> from relizene_weather import main
+> 
+> # Инициализация с API-ключом
+> fetcher = main.run_city(appid="ВАШ_КЛЮЧ_OPENWEATHERMAP")
+> 
+> # Получить погоду для города (автоматическая валидация через Nominatim)
+> weather = main.run_city(city = "Москва")
+> print(weather)
 
 📚 Документация
+Основные методы
+get_weather(location: str) -> WeatherData – возвращает объект с данными о погоде.
 
-Полная документация: README.MD
+validate_location(location: str) -> str – проверяет и нормализует название локации.
 
-🛠️ Технологии
-
-Python 3.8+
-requests
-inspect
-
+Пример с координатами
+python
+weather = fetcher.get_weather_by_coords(lat=55.75, lon=37.61)
+🛠️ Для разработчиков
+Установка из исходников
+bash
+git clone https://github.com/relizene/Relizene_weather.git
+cd Relizene_weather
+pip install -e .
+Запуск тестов
+bash
+pytest tests/ -v
 🤝 Как помочь проекту
-
 Форкните репозиторий
-Создайте ветку (git checkout -b feature/ваша-фича)
-Закоммитьте изменения (git commit -m 'Add some feature')
-Запушьте ветку (git push origin feature/ваша-фича)
-Откройте Pull Request
+
+Создайте ветку: git checkout -b feature/new-feature
+
+Закоммитьте изменения: git commit -m 'Add awesome feature'
+
+Запушьте ветку: git push origin feature/new-feature
+
+Создайте Pull Request
 
 📜 Лицензия
-Apache 2.0. Подробнее в файле LICENSE.
+Распространяется под лицензией MIT. Подробнее в LICENSE.
 
 📧 Контакты
-Владимир – @Valodyaaaa – vovaegorov689@gmail.com
+Релиз Неизвестный – @relizene – relizene@example.com
 
-
+Проект на GitHub: https://github.com/relizene/Relizene_weather
