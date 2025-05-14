@@ -1,3 +1,7 @@
+$ cat .gitignore
+*.[oa]
+*~
+
 # Python
 __pycache__/
 *.py[cod]
