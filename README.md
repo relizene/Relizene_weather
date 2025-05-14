@@ -4,68 +4,79 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 
-> Простой и удобный Python-модуль для получения прогноза погоды через OpenWeatherMap API. 
-> Поддерживает валидацию локаций через Nominatim и кеширование запросов.
-> В особенности здесь реилизована сложная валдиация города. Для полной информации откройте файл из папки Doc.
+> Simple and user-friendly Python module for fetching weather forecasts via the OpenWeatherMap API.
+> Supports location validation using Nominatim and request caching.
+> Features advanced city validation logic. For full details, refer to the documentation in the Doc folder.
+> 
+> Key Features Highlighted:
+> Easy Integration: Straightforward access to OpenWeatherMap API.
+> 
+> Location Validation: Ensures accurate city/region names via Nominatim.
+> 
+> Caching: Reduces API calls by caching frequent requests.
+> 
+> Robust Validation: Sophisticated checks for city name accuracy and geolocation.
+> 
+> Documentation: Comprehensive guides and details available in the Doc folder.
 
 ---
 
-## 🚀 Быстрый старт
+## 🚀 Fast start
 
-### Установка
+### Installation
 > ```bash
 > pip install relizene-weather
 
-Пример использования
+Usage example
 > ```bash
 > python
 > from relizene_weather import main
 >
 
-### Инициализация с API-ключом
+### Inicialization with API-key
 > ```bash
-> fetcher = main.run_city(appid="ВАШ_КЛЮЧ_OPENWEATHERMAP")
+> fetcher = main.run_city(appid="You_Key_OPENWEATHERMAP")
 > 
-> Получить погоду для города (автоматическая валидация через Nominatim)
-> weather = main.run_city(city = "Москва")
+> recieve weather for city (automatic validation via Nominatim)
+> weather = main.run_city(city = "London")
 > print(weather)
 >
 
-## 📚 Документация. Основные методы
+## 📚 Documentation. Basic methods
 > ```bash
-> run_cuty(location: str) -> WeatherData – возвращает объект с данными о погоде.
-> run_geo(location: str) -> str – возвращает обьект с данными о погоде.
+> run_cuty(location: str) -> WeatherData –  returns an object with weather data. 
+> run_geo(location: str) -> str – returns an object with weather data. 
 > 
-> Пример с координатами
+> Examples with coordinates
 > python
-> weather = fetcher.get_weather_by_coords(lat=55.75, lon=37.61)
+> weather = main.run_geo(lat=55.75, lon=37.61)
 >
 
-## 🛠️ Для разработчиков
+## 🛠️ For developers
 > ```bash
-> Установка из исходников
+> Source installation 
 > bash
 > git clone https://github.com/relizene/Relizene_weather.git
 > cd Relizene_weather
 > pip install -e .
 >
 
-## Запуск тестов
+## Tests run
 > bash
 > pytest tests/ -v
 >
 
-## 🤝 Как помочь проекту
+## 🤝 How to help project
 > ```bash
-> Форкните репозиторий
-> Создайте ветку: git checkout -b feature/new-feature
-> Закоммитьте изменения: git commit -m 'Add awesome feature'
-> Запушьте ветку: git push origin feature/new-feature
-> Создайте Pull Request
+> Fork repository
+> Create branches: git checkout -b feature/new-feature
+> Commit changes: git commit -m 'Add awesome feature'
+> Push branches: git push origin feature/new-feature
+> Create Pull Request
 
-## 📜 Лицензия
-Распространяется под лицензией MIT. Подробнее в LICENSE.
+## 📜 License
+Distributed under a license  MIT. more detailed in LICENSE.
 
-## 📧 Контакты
-Релиз Неизвестный – telegramm@Valodyaaa – email@vovaegorov689@gmail.com
-Проект на GitHub: https://github.com/relizene/Relizene_weather
+## 📧 Contacts
+Reliz unknouwn – telegramm@Valodyaaa – email@vovaegorov689@gmail.com
+project in GitHub: https://github.com/relizene/Relizene_weather
