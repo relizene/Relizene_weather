@@ -1,7 +1,7 @@
 import requests
-from settings.settings import configuration, configuration_2
+from .settings.settings import configuration, configuration_2
 import copy
-from settings.validator import ValidateMeta
+from .settings.validator import ValidateMeta
 
 
 

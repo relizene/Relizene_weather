@@ -1,6 +1,6 @@
 import inspect
 import requests
-from settings.settings import Error_Not_Find_ciity, Error_Lot_City
+from .settings import Error_Not_Find_ciity, Error_Lot_City
 
 
 

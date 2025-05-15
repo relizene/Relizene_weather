@@ -1,5 +1,5 @@
-from api_call import City_api, Geo_api
-from settings.settings import Error_Not_Find_ciity, Error_Lot_City, errors_argument_602
+from .api_call import City_api, Geo_api
+from .settings.settings import Error_Not_Find_ciity, Error_Lot_City, errors_argument_602
 
 
 
