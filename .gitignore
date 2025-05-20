@@ -19,6 +19,7 @@ tests/
 # Logs
 *.log
 
+
 # Pypi файлы
 build/
 dist/
